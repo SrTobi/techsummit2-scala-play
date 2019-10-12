@@ -18,7 +18,11 @@
     <table style="margin: 5px">
         <tr>
             <td>/pushScan/:userId/:exhibitorId</td>
-            <td>Ok / Error</td>
+            <td>Ok / Bad Request</td>
+        </tr>
+        <tr>
+            <td>/clearScans</td>
+            <td>Ok / Bad Request</td>
         </tr>
         <tr>
             <td>/scans/:userId</td>
@@ -48,7 +52,8 @@
             exhibitorId: "aaaa",
             name: "BioFuel To Food GmbH.",
             icon: "http://lappen.de/fav.ico",
-            location: "Halle 3, Stand 124"
+            location: "Halle 3, Stand 124",
+            rating: 0.6
         }
         ...
     ]
