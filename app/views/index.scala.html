@@ -1,0 +1,60 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(title: String)
+
+@main(title) {
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            padding: 4px;
+        }
+        code {
+            display: block;
+            white-space: pre-wrap
+        }
+    </style>
+    <table style="margin: 5px">
+        <tr>
+            <td>/pushScan/:userId/:exhibitorId</td>
+            <td>Ok / Error</td>
+        </tr>
+        <tr>
+            <td>/scans/:userId</td>
+            <td>
+                <code>
+{
+    scans: [
+        {
+            exhibitorId: "aaaa",
+            name: "BioFuel To Food GmbH.",
+            icon: "http://lappen.de/fav.ico"
+            location: "Halle 3, Stand 124"
+        }
+        ...
+    ]
+}
+                </code>
+            </td>
+        </tr>
+        <tr>
+            <td>/recommendations/:userid</td>
+            <td>
+                <code>
+{
+    recommendations: [
+        {
+            exhibitorId: "aaaa",
+            name: "BioFuel To Food GmbH.",
+            icon: "http://lappen.de/fav.ico",
+            location: "Halle 3, Stand 124"
+        }
+        ...
+    ]
+}
+                </code>
+            </td>
+        </tr>
+    </table>
+}
