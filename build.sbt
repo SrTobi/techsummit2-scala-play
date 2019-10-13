@@ -15,3 +15,7 @@ libraryDependencies ++= Seq( jdbc , ehcache , ws , specs2 % Test , guice )
 unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" )  
 
 maintainer := "code.databyte@gmail.com"
+
+javaOptions in Universal ++= Seq(
+  "-Dpidfile.path=/dev/null"
+)

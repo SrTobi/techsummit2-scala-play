@@ -1,7 +1,9 @@
 package services
 
 import data.{ExhibitorId, ExhibitorInfo}
-import javax.inject.Singleton
+import javax.inject.{Inject, Singleton}
+import play.api.Environment
+import play.api.libs.json.Json
 
 trait ExhibitorService {
   def resolve(id: String): Option[ExhibitorId]
@@ -14,9 +16,14 @@ trait ExhibitorService {
 import ExhibitorServiceImpl._
 
 @Singleton
-class ExhibitorServiceImpl extends ExhibitorService {
+class ExhibitorServiceImpl @Inject()(environment: Environment)extends ExhibitorService {
+  override val exhibitors: Seq[ExhibitorInfo] = {
+    val stream = environment.resourceAsStream("/exhibitors.json").get
+    try Json.fromJson[Array[ExhibitorInfo]](Json.parse(stream)).get finally stream.close()
+  }
+
   private val validExhibitorIds =
-    staticExhibitors.map(info => info.id.internal -> info).toMap
+    exhibitors.map(info => info.id.internal -> info).toMap
 
   override def resolve(id: String): Option[ExhibitorId] =
     validExhibitorIds.get(id).map(_.id)
@@ -24,15 +31,13 @@ class ExhibitorServiceImpl extends ExhibitorService {
   override def info(id: ExhibitorId): ExhibitorInfo =
     validExhibitorIds(id.internal)
 
-  override val exhibitors: Seq[ExhibitorInfo] = staticExhibitors
-
   override val exhibitorIds: Set[ExhibitorId] =
     exhibitors.map(_.id).toSet
 }
 
 object ExhibitorServiceImpl {
   private[this] def id(id: String): ExhibitorId = new ExhibitorId(id)
-
+/*
   private val staticExhibitors = Seq(
     ExhibitorInfo(
       id = id("dummy1"),
@@ -55,5 +60,7 @@ object ExhibitorServiceImpl {
       icon = "https://www.w3schools.com/favicon.ico"
     )
   )
+
+ */
 }
 

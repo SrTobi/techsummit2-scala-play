@@ -1,0 +1,72 @@
+[
+  {
+    "exhibitorId": "ex1",
+    "name": "Rapunzel",
+    "icon": "https://www.rapunzel.de/design/logo-rapunzel-naturkost-legau.png",
+    "location": "Halle 5, Stand 103",
+    "description": ""
+  },
+  {
+    "exhibitorId": "ex2",
+    "name": "Denree",
+    "icon": "https://bio-markt.info/assets/images/a/Dennree_logo-4c7b09aa.png",
+    "location": "Halle 4, Stand 15",
+    "description": ""
+  },
+  {
+    "exhibitorId": "ex3",
+    "name": "Weleda",
+    "icon": "https://collegeofmedicine.org.uk/wp-content/uploads/2019/06/Weleda-Logo.png",
+    "location": "Halle 5, Stand 9",
+    "description": ""
+  },
+  {
+    "exhibitorId": "ex4",
+    "name": "Bionande",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Bionade_Logo.svg",
+    "location": "Halle 3, Stand 29",
+    "description": ""
+  },
+  {
+    "exhibitorId": "ex5",
+    "name": "Sonnentor",
+    "icon": "https://asset.erhebung.at/asset/show/id/30753",
+    "location": "Halle 3, Stand 110",
+    "description": ""
+  },
+  {
+    "exhibitorId": "ex6",
+    "name": "Andechser",
+    "icon": "https://www.andechser-natur.de/themes/andechsernatur_bs/logo.svg",
+    "location": "Halle 2, Stand 98",
+    "description": ""
+  },
+  {
+    "exhibitorId": "ex7",
+    "name": "TaiFun Tofu",
+    "icon": "https://www.taifun-tofu.de/sites/default/files/taifunlogo.png",
+    "location": "Halle 2, Stand 22",
+    "description": ""
+  },
+  {
+    "exhibitorId": "ex8",
+    "name": "Allos",
+    "icon": "https://amp.wuv.de/var/wuv/storage/images/werben_verkaufen/agenturen/fluent_gewinnt_bio_unternehmen_allos_hof_manufaktur/9006492-1-ger-DE/fluent_gewinnt_bio_unternehmen_allos_hof_manufaktur_gross.jpg",
+    "location": "Halle 4, Stand 35",
+    "description": ""
+  },
+  {
+    "exhibitorId": "ex9",
+    "name": "Davert",
+    "icon": "http://www.kaufhaus-schramm.de/pics/logos/davert.gif",
+    "location": "Halle 1, Stand 56",
+    "description": ""
+  },
+  {
+    "exhibitorId": "ex10",
+    "name": "fair",
+    "icon": "https://img.utopia.de/pdso4sgWBb2kZCM8dZgO5j9dBPU=/640x300/https://utopia.de/app/uploads/2016/06/gepa-fair-plus-z-180202-gepa-1280x600.jpg",
+    "location": "Halle 2, Stand 19",
+    "description": ""
+  }
+]
