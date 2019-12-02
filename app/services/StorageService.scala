@@ -42,8 +42,9 @@ class StorageServiceImpl @Inject() (exhibitorService: ExhibitorService) extends 
       .iterator
       .filterNot(alreadyVisited)
       .map(id => id -> rateExhibitor(id, userId, state))
+      .filter(_._2 > 0)
       .toArray
-      .sortBy(_._2)
+      .sortBy(-_._2)
   }
 }
 
@@ -72,7 +73,7 @@ object StorageServiceImpl {
     val userVisitedSimilarities = visitedUser(exhibitorId)
         .flatMap(userSimilarity(_, userId, state))
 
-    if (userVisitedSimilarities.isEmpty) 0.4
+    if (userVisitedSimilarities.isEmpty) 0
     else userVisitedSimilarities.iterator.sum / userVisitedSimilarities.size
   }
 
